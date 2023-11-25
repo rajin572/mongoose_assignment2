@@ -11,7 +11,7 @@
   npm i
 ```
 
-- After Install all the package. run
+- After Install all the package. run npm run start:dev to start the server.
 
 ```npm
 npm run start:dev
