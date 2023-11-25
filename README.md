@@ -1,6 +1,6 @@
 # Mongoose Express CRUD Mastery Assignment
 
-### Live Server Link: <a href="https://assingment-2-roan.vercel.app/">https://assingment-2-roan.vercel.app/</a>
+### Live Server Link: <a href="https://mongoose-assignment-2.vercel.app/">https://mongoose-assignment-2.vercel.app/</a>
 
 ### Routes:
 
