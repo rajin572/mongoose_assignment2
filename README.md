@@ -12,3 +12,38 @@
 - Create Order for a Specific User Endpoint: **PUT /api/users/:userId/orders**
 - Get Orders for a Specific User Endpoint: **GET /api/users/:userId/orders**
 - Calculate Total Price for a Specific User Endpoint: **GET /api/users/:userId/orders/total-price**
+
+### Instruction:
+
+- **JSON Structure for Create User and Update User :**
+
+```json
+{
+  "userId": "number",
+  "username": "string",
+  "password": "string",
+  "fullName": {
+    "firstName": "string",
+    "lastName": "string"
+  },
+  "age": "number",
+  "email": "string",
+  "isActive": "boolean",
+  "hobbies": ["string", "string"],
+  "address": {
+    "street": "string",
+    "city": "string",
+    "country": "string"
+  }
+}
+```
+
+- **JSON Structure for Create Order :**
+
+```json
+{
+  "productName": "string",
+  "price": "number",
+  "quantity": "number"
+}
+```
