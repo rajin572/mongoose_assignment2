@@ -10,47 +10,63 @@ import {
 import config from '../../config';
 
 const FullnameSchema = new Schema<TFullname>({
-  firstName: { type: String },
-  lastName: { type: String },
+  firstName: { type: String, required: [true, 'First Name is required'] },
+  lastName: { type: String, required: [true, 'Last Name is required'] },
 });
 
 const AddressSchema = new Schema<TAddress>({
   street: {
     type: String,
+    required: [true, 'street Name is required'],
   },
   city: {
     type: String,
+    required: [true, 'city Name is required'],
   },
   country: {
     type: String,
+    required: [true, 'country Name is required'],
   },
 });
 
 const OrderSchema = new Schema<TOrder>({
   productName: {
     type: String,
+    required: [true, 'Product Name is required'],
   },
   price: {
     type: Number,
+    required: [true, 'Price is required'],
   },
   quantity: {
     type: Number,
+    required: [true, 'Quantity is required'],
   },
 });
 
 const UserSchema = new Schema<TUser, UserModel>({
-  userId: { type: Number, unique: true, required: true },
-  username: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
+  userId: {
+    type: Number,
+    unique: true,
+    required: [true, 'UserId is required'],
+  },
+  username: {
+    type: String,
+    unique: true,
+    required: [true, 'Username is required'],
+  },
+  password: { type: String, required: [true, 'Password is required'] },
   fullName: {
     type: FullnameSchema,
+    required: [true, 'Full Name is required'],
   },
-  age: { type: Number, required: true },
-  email: { type: String, required: true },
+  age: { type: Number, required: [true, 'Age is required'] },
+  email: { type: String, required: [true, 'Email is required'] },
   isActive: { type: Boolean, default: true },
   hobbies: { type: [String], default: [] },
   address: {
     type: AddressSchema,
+    required: [true, 'Address is required'],
   },
   orders: [{ type: OrderSchema }],
 });
