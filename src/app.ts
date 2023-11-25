@@ -11,7 +11,10 @@ app.use(cors());
 app.use('/api/users', UserRoutes);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Mongoose Assignment Project');
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to My Assignment!',
+  });
 });
 
 // Sent Error when Router is Not Found
