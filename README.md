@@ -2,6 +2,21 @@
 
 ### Live Server Link: <a href="https://mongoose-assignment-2.vercel.app/">https://mongoose-assignment-2.vercel.app/</a>
 
+### Run Locally:
+
+- At first clone my github repo. then install all the package.
+- To install all the package. go to terminal and comand
+
+```npm
+  npm i
+```
+
+- After Install all the package. run
+
+```npm
+npm run start:dev
+```
+
 ### Routes:
 
 - Create User Endpoint: **POST /api/users**
