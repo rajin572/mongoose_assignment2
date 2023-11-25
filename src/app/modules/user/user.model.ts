@@ -110,7 +110,7 @@ UserSchema.pre('findOneAndUpdate', function (next) {
   next();
 });
 
-//static method
+//static method : Check User Exist or not
 UserSchema.statics.isUserExists = async function (userId: number) {
   const existingUser = await User.findOne({ userId });
 

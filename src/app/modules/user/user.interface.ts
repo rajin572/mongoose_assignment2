@@ -29,6 +29,7 @@ export type TUser = {
   orders?: TOrder[];
 };
 
+// Stattic Method Interface
 export interface UserModel extends Model<TUser> {
   isUserExists(id: number): Promise<TUser | null>;
 }
